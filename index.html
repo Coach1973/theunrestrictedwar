@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超限戰 The Unrestricted War | 戰火無聲 真相有價 | 全台震撼上映</title>
+    <meta name="description" content="全球首部新冠疫情紀實劇情片《超限戰》，靈感源自1999年中共軍方《超限戰》戰略文件。">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        movie: {
+                            bg: '#112A34',       /* 深岩石青藍色 */
+                            text: '#D6DFE2',     /* 淺灰白內文字 */
+                            title: '#E8F0F2',    /* 亮白標題 */
+                            gold: '#C2A562',     /* 低調金 */
+                            goldhover: '#DCC386',
+                            card: '#16333D',     /* 卡片底色 */
+                            border: '#20414E',   /* 邊框色 */
+                            btnbg: '#0D1B22'     /* 串流按鈕深色背景 */
+                        }
+                    },
+                    fontFamily: {
+                        title: ['Oswald', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'poster': '0.05em',
+                        'poster-wide': '0.1em'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #112A34;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* 導覽列動畫 */
+        .nav-link { transition: all 0.2s ease; position: relative; }
+        .nav-link:hover, .nav-link.active { color: #C2A562; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -4px; left: 0; background-color: #C2A562; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+        /* 標題底線 */
+        .section-header { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .section-header::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 60px;
+            height: 3px; background-color: #C2A562; border-radius: 2px;
+        }
+
+        /* 表格樣式 */
+        .timeline-table { border-collapse: separate; border-spacing: 0; }
+        .timeline-table th { background: rgba(22, 51, 61, 0.8); border-bottom: 2px solid #20414E; color: #E8F0F2; }
+        .timeline-table td { border-bottom: 1px solid #20414E; transition: background-color 0.2s ease; }
+        .timeline-table tr:hover td { background-color: rgba(22, 51, 61, 0.5); }
+
+        /* 觀眾回饋滾動軸 */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .carousel-item {
+            flex: 0 0 100%;
+            padding: 0 12px;
+        }
+        @media (min-width: 768px) {
+            .carousel-item { flex: 0 0 50%; }
+        }
+        @media (min-width: 1024px) {
+            .carousel-item { flex: 0 0 33.333333%; }
+        }
+    </style>
+</head>
+<body class="text-movie-text font-body">
+
+    <nav class="bg-movie-bg/95 backdrop-blur-md border-b border-movie-border sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <div class="font-title uppercase">
+                        <span class="font-bold text-3xl md:text-4xl tracking-poster text-movie-title block md:inline">超限戰</span>
+                        <span class="text-[10px] text-movie-gold block md:inline md:ml-2 tracking-poster-wide">THE UNRESTRICTED WAR</span>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center gap-x-8 text-xl font-medium">
+                    <a href="#synopsis" class="nav-link px-2 py-1">影評及劇情簡介</a>
+                    <a href="#why-watch" class="nav-link px-2 py-1">為什麼要看</a>
+                    <a href="#schedule" class="nav-link px-2 py-1">放映時刻表</a>
+                    <a href="#testimonials" class="nav-link px-2 py-1">觀眾回饋</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <a href="https://www.ganjingworld.com/channel/1hrsnb04ct84iO1e89rJXexMs14m0c?tab=home&ht=%E8%B6%85%E9%99%90%E6%88%98&stab=hashtags&subtabshowing=latest" 
+                       target="_blank"
+                       class="hidden sm:inline-flex items-center px-5 py-2 border border-movie-gold text-movie-gold hover:bg-movie-gold/10 font-bold text-sm rounded transition-all">
+                        官方網站
+                    </a>
+                    <a href="#cta-section" 
+                       class="hidden sm:inline-flex items-center px-6 py-2 bg-movie-gold text-movie-bg hover:bg-movie-goldhover font-bold text-sm rounded transition-all">
+                        <i class="fa-solid fa-ticket mr-2"></i>
+                        <span>立即預訂</span>
+                    </a>
+                    
+                    <button id="mobile-menu-btn" class="lg:hidden text-movie-text hover:text-movie-gold transition-colors">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-movie-border bg-movie-bg">
+            <div class="px-6 py-4 flex flex-col gap-y-2 text-base font-medium">
+                <a href="#synopsis" class="mobile-nav-link py-2 hover:text-movie-gold">影評及劇情簡介</a>
+                <a href="#why-watch" class="mobile-nav-link py-2 hover:text-movie-gold">為什麼要看</a>
+                <a href="#schedule" class="mobile-nav-link py-2 hover:text-movie-gold">放映時刻表</a>
+                <a href="#testimonials" class="mobile-nav-link py-2 hover:text-movie-gold">觀眾回饋</a>
+                <a href="https://www.ganjingworld.com/channel/1hrsnb04ct84iO1e89rJXexMs14m0c?tab=home&ht=%E8%B6%85%E9%99%90%E6%88%98&stab=hashtags&subtabshowing=latest" target="_blank" class="mobile-nav-link py-2 text-movie-gold">官方網站</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-12 md:py-20">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                
+                <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                    <img src="./1779859916089.jpg" alt="The Unrestricted War Poster" 
+                         class="w-full max-w-md lg:max-w-full rounded-sm shadow-2xl border border-movie-border/50">
+                </div>
+                
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <div class="font-title uppercase text-movie-title mb-8">
+                        <div class="text-2xl md:text-3xl tracking-poster font-bold mb-[-10px] md:mb-[-15px]">THE</div>
+                        <h1 class="text-6xl md:text-7xl lg:text-[90px] font-bold tracking-tight leading-none">
+                            UNRESTRICTED<br>WAR
+                        </h1>
+                    </div>
+                    
+                    <p class="text-base md:text-lg leading-relaxed mb-4 font-light text-movie-text max-w-2xl">
+                        A top-tier Canadian virologist and his Chinese wife are suddenly arrested by military secret agents in Beijing. He is threatened with the task of stealing a sample of his own work from the P4 laboratory in Winnipeg, and the situation rapidly turns worse when people begin to fall ill.
+                    </p>
+                    
+                    <p class="text-base md:text-lg leading-relaxed mb-6 font-normal text-movie-text max-w-2xl border-l-2 border-movie-gold pl-4 bg-movie-card/30 py-2 rounded-r-sm">
+                        一位在中國經營生物科技公司的加拿大頂尖病毒學家與其妻子，在北京突遭軍方特工逮捕。他被脅迫潛入加拿大 P4 實驗室竊取機密病毒樣本。隨著病毒失控擴散，局勢迅速惡化，這不再只是科學危機，而是一場早有預謀的「超限戰」。
+                    </p>
+                    
+                    <div class="text-base font-light mb-8 space-y-1">
+                        <p>Directed by <span class="font-medium text-movie-title">馬琰 Yan Ma</span></p>
+                        <p>Written by <span class="font-medium text-movie-title">Rob W. King & 馬琰 Yan Ma</span></p>
+                    </div>
+                    
+                    <div class="text-movie-gold font-medium text-sm tracking-poster mb-4">
+                        Proudly Filmed and Produced in Canada
+                    </div>
+                    
+                    <div class="flex items-center gap-x-6 mb-10 opacity-70">
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-stamp text-2xl text-movie-gold"></i>
+                            <span class="text-[8px] mt-1 tracking-widest uppercase">Brilliant Media</span>
+                        </div>
+                        <div class="text-xs border-l border-r border-movie-border px-4 py-1">Ontario<br><span class="font-bold text-movie-title">CREATES</span></div>
+                        <div class="font-title font-bold text-xl tracking-wider">Canada</div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://tv.apple.com/by/movie/the-unrestricted-war/umc.cmc.4abco1kve5wk0vrgpt58aban5" target="_blank" class="flex items-center justify-center bg-movie-btnbg hover:bg-black border border-movie-border/40 hover:border-movie-text/30 transition-all rounded px-6 py-2.5 h-[46px] min-w-[90px]">
+                            <i class="fa-brands fa-apple text-xl text-movie-title"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@%E8%B6%85%E9%99%90%E6%88%B0TheUnrestrictedWar" target="_blank" class="flex items-center justify-center gap-x-2 bg-movie-btnbg hover:bg-black border border-movie-border/40 hover:border-movie-text/30 transition-all rounded px-6 py-2.5 h-[46px] min-w-[120px]">
+                            <i class="fa-brands fa-youtube text-[#FF0000] text-xl"></i>
+                            <span class="font-title font-bold tracking-tight text-white text-base mt-0.5">YouTube</span>
+                        </a>
+                        <a href="https://www.amazon.com/gp/video/detail/B0FCBHZMNG/" target="_blank" class="flex items-center justify-center bg-movie-btnbg hover:bg-black border border-movie-border/40 hover:border-movie-text/30 transition-all rounded px-6 py-2.5 h-[46px] min-w-[120px]">
+                            <span class="font-bold italic text-[#00A8E1] tracking-tight text-lg">prime video</span>
+                        </a>
+                        <a href="https://www.ganjingworld.com/gjwplus/detail/the-unrestricted-war-premiering-august-8/1hqhefj9um52TjAFjjQFtWun61du1c?utm_term=unrestrictedwar&utm_medium=website&utm_source=tuw&utm_source_platform=direct&utm_campaign=website07242025&utm_content=website" target="_blank" class="flex items-center justify-center bg-movie-btnbg hover:bg-black border border-movie-border/40 hover:border-movie-gold/50 transition-all rounded px-6 py-2.5 h-[46px] min-w-[100px]">
+                            <span class="font-title font-bold tracking-wider text-movie-gold text-lg">GJW+</span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <section id="synopsis" class="border-t border-movie-border bg-movie-bg/50">
+        <div class="max-w-screen-2xl mx-auto px-6 py-20 md:py-28">
+            <div class="max-w-4xl mx-auto">
+                <span class="text-movie-gold text-xs font-bold tracking-poster-wide uppercase block mb-3">Synopsis & Reviews</span>
+                <h2 class="text-3xl md:text-4xl font-title font-bold tracking-wide text-movie-title section-header mb-12">影評及劇情簡介</h2>
+                
+                <div class="mb-14 p-8 bg-gradient-to-r from-movie-card to-transparent border-l-4 border-movie-gold rounded-r-lg relative overflow-hidden shadow-lg shadow-black/20">
+                    <i class="fa-solid fa-quote-left absolute top-4 right-6 text-6xl text-movie-border opacity-30"></i>
+                    
+                    <p class="text-lg md:text-xl text-movie-title font-light leading-loose mb-6 relative z-10 tracking-wide">
+                        如果你知道當年的新冠疫情其實並不是一場天然的災害，而是一場刻意為之的全球陰謀，這場疫情打亂了我們的生活，導致很多家破人亡，讓我們每天活在恐懼跟擔憂當中...<span class="text-movie-text border-b border-movie-text/30">不曉得你是否還心有餘悸？</span>
+                    </p>
+                    
+                    <p class="text-xl md:text-2xl text-movie-gold font-bold leading-relaxed relative z-10">
+                        如果，只是如果，假設，只是假設，當你知道這不是一場天然災害，而是人為的.....你可能無法想像，也可能無法相信，那你就一定要來看這部電影。
+                    </p>
+                </div>
+                
+                <div class="space-y-6 text-lg leading-relaxed font-light text-movie-text pt-6">
+                    <p>全球首部新冠疫情紀實劇情片，靈感源自 1999 年中共解放軍發表的《超限戰》戰略文件。本片大膽將其搬上大銀幕，融合近年震驚世界的真實事件，挑戰社會對戰爭的傳統認知。</p>
+                    
+                    <p>故事主角吉姆·康拉德發現自己深陷一場結合生化戰、資訊戰、金融戰與認知作戰的全球陰謀。這場戰爭沒有硝煙，沒有前線，它突破了傳統軍事範疇，透過非軍事手段達成對社會與人心的無聲控制。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-watch" class="border-t border-movie-border">
+        <div class="max-w-screen-2xl mx-auto px-6 py-20 md:py-28">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-14">
+                    <span class="text-movie-gold text-xs font-bold tracking-poster-wide uppercase block mb-3">Why This Film Matters</span>
+                    <h2 class="text-3xl md:text-4xl font-title font-bold tracking-wide text-movie-title section-header">為什麼你應該看這部電影？</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-movie-card border border-movie-border p-8 rounded-md transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(194,165,98,0.15)] hover:border-movie-gold group cursor-default">
+                        <div class="text-movie-gold mb-5 text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1"><i class="fa-solid fa-globe"></i></div>
+                        <h3 class="font-bold text-xl mb-3 text-movie-title tracking-wide transition-colors group-hover:text-movie-gold">超限戰的真實樣貌</h3>
+                        <p class="leading-relaxed font-light text-sm text-movie-text/80 group-hover:text-movie-text transition-colors">現代戰爭早已超越槍砲與戰場。影片揭示認知作戰、資訊操控與長臂管轄如何無聲滲透日常生活與國際社會。</p>
+                    </div>
+                    
+                    <div class="bg-movie-card border border-movie-border p-8 rounded-md transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(194,165,98,0.15)] hover:border-movie-gold group cursor-default">
+                        <div class="text-movie-gold mb-5 text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3 class="font-bold text-xl mb-3 text-movie-title tracking-wide transition-colors group-hover:text-movie-gold">守住良知與勇氣</h3>
+                        <p class="leading-relaxed font-light text-sm text-movie-text/80 group-hover:text-movie-text transition-colors">當面對極端壓力與抉擇時，我們是否還能守住善良？影片大力呼籲：「幫助人們的唯一方法，就是告訴他們真相。」</p>
+                    </div>
+                    
+                    <div class="bg-movie-card border border-movie-border p-8 rounded-md transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(194,165,98,0.15)] hover:border-movie-gold group cursor-default">
+                        <div class="text-movie-gold mb-5 text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="font-bold text-xl mb-3 text-movie-title tracking-wide transition-colors group-hover:text-movie-gold">培養獨立思考</h3>
+                        <p class="leading-relaxed font-light text-sm text-movie-text/80 group-hover:text-movie-text transition-colors">在資訊爆炸的時代，真正的勇氣是願意追問真相、不隨波逐流。特別適合大眾深入理解當前局勢與進行自我保護。</p>
+                    </div>
+
+                    <div class="bg-movie-card border border-movie-border p-8 rounded-md transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(194,165,98,0.15)] hover:border-movie-gold group cursor-default">
+                        <div class="text-movie-gold mb-5 text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3 class="font-bold text-xl mb-3 text-movie-title tracking-wide transition-colors group-hover:text-movie-gold">社會教育價值</h3>
+                        <p class="leading-relaxed font-light text-sm text-movie-text/80 group-hover:text-movie-text transition-colors">校園與各界公益放映反應極度熱烈，不分年齡層觀眾直呼「心有餘悸！細思極恐！」，具備極高的思辨推廣價值。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="border-t border-movie-border bg-movie-bg/50">
+        <div class="max-w-screen-2xl mx-auto px-6 py-20">
+            <div class="max-w-[1100px] mx-auto">
+                <div class="mb-12">
+                    <span class="text-movie-gold text-xs font-bold tracking-poster-wide uppercase block mb-3">Now Showing</span>
+                    <h2 class="text-3xl md:text-4xl font-title font-bold tracking-wide text-movie-title section-header">《超限戰》上映時刻表</h2>
+                    <p class="mt-5 text-movie-text font-light">2026/5/29(五) - 6/04(四) ｜ <span class="border border-movie-border px-2 py-1 text-xs">保護級 6+</span></p>
+                </div>
+                
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="font-bold text-xl text-movie-title mb-4 tracking-wide"><span class="text-movie-gold mr-2">/</span>北部戲院</h3>
+                        <div class="overflow-x-auto border border-movie-border rounded-sm">
+                            <table class="timeline-table w-full min-w-[900px] text-base md:text-lg text-center">
+                                <thead>
+                                    <tr>
+                                        <th class="px-4 py-4 text-left pl-6 font-semibold tracking-wide w-36">戲院</th>
+                                        <th class="px-3 py-4 font-semibold">5/29(五)</th>
+                                        <th class="px-3 py-4 font-semibold">5/30(六)</th>
+                                        <th class="px-3 py-4 font-semibold">5/31(日)</th>
+                                        <th class="px-3 py-4 font-semibold">6/01(一)</th>
+                                        <th class="px-3 py-4 font-semibold">6/02(二)</th>
+                                        <th class="px-3 py-4 font-semibold">6/03(三)</th>
+                                        <th class="px-3 py-4 font-semibold">6/04(四)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="font-normal text-movie-text">
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">淡水國賓</td>
+                                        <td>16:10</td><td>11:40</td><td>11:40</td><td>16:10</td><td>16:10</td><td>16:20</td><td>16:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">南港喜樂</td>
+                                        <td>15:10<br><span class="text-sm text-movie-gold font-medium">19:35</span></td>
+                                        <td>13:20<br><span class="text-sm text-movie-gold font-medium">19:35</span></td>
+                                        <td>13:20<br><span class="text-sm text-movie-gold font-medium">19:35</span></td>
+                                        <td>13:15<br><span class="text-sm text-movie-gold font-medium">19:35</span></td>
+                                        <td>15:10<br><span class="text-sm text-movie-gold font-medium">19:35</span></td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">長春國賓</td>
+                                        <td>11:20</td><td>11:20</td><td>11:10</td><td>11:20</td><td>11:20</td><td>11:20</td><td>11:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">西門喜樂</td>
+                                        <td>17:05<br><span class="text-sm text-movie-gold font-medium">21:05</span></td>
+                                        <td>16:00<br><span class="text-sm text-movie-gold font-medium">20:45</span></td>
+                                        <td>17:00<br><span class="text-sm text-movie-gold font-medium">21:25</span></td>
+                                        <td>16:05<br><span class="text-sm text-movie-gold font-medium">21:25</span></td>
+                                        <td>17:05<br><span class="text-sm text-movie-gold font-medium">21:25</span></td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">永和喜樂</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">林口國賓</td>
+                                        <td>18:30<br><span class="text-sm opacity-80">(貴賓廳)</span></td>
+                                        <td class="text-movie-gold font-bold">11:40<br><span class="text-xs opacity-80">(包場完售)</span></td>
+                                        <td>11:40<br><span class="text-sm opacity-80">(貴賓廳)</span></td>
+                                        <td>16:10</td><td>16:10</td><td>16:10</td><td>16:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">桃園星橋</td>
+                                        <td colspan="7" class="text-amber-400 font-bold tracking-widest bg-movie-card/30">戲院公告</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-xl text-movie-title mb-4 tracking-wide"><span class="text-movie-gold mr-2">/</span>中南部戲院</h3>
+                        <div class="overflow-x-auto border border-movie-border rounded-sm">
+                            <table class="timeline-table w-full min-w-[900px] text-base md:text-lg text-center">
+                                <thead>
+                                    <tr>
+                                        <th class="px-4 py-4 text-left pl-6 font-semibold tracking-wide w-36">戲院</th>
+                                        <th class="px-3 py-4 font-semibold">5/29(五)</th>
+                                        <th class="px-3 py-4 font-semibold">5/30(六)</th>
+                                        <th class="px-3 py-4 font-semibold">5/31(日)</th>
+                                        <th class="px-3 py-4 font-semibold">6/01(一)</th>
+                                        <th class="px-3 py-4 font-semibold">6/02(二)</th>
+                                        <th class="px-3 py-4 font-semibold">6/03(三)</th>
+                                        <th class="px-3 py-4 font-semibold">6/04(四)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="font-normal text-movie-text">
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">王牌映畫</td>
+                                        <td>17:20</td><td>12:35</td><td>10:10</td><td>17:20</td><td>17:20</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                        <td class="text-amber-400 font-bold tracking-wider">戲院公告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">清水時代</td>
+                                        <td colspan="7" class="text-amber-400 font-bold tracking-widest py-4 bg-movie-card/10">戲 院 公 告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">山明戲院</td>
+                                        <td colspan="7" class="text-amber-400 font-bold tracking-widest py-4 bg-movie-card/10">戲 院 公 告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">麻豆戲院</td>
+                                        <td colspan="7" class="text-amber-400 font-bold tracking-widest py-4 bg-movie-card/10">戲 院 公 告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">南台影城</td>
+                                        <td colspan="7" class="text-amber-400 font-bold tracking-widest py-4 bg-movie-card/10">戲 院 公 告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">高雄喜樂</td>
+                                        <td colspan="7" class="text-amber-400 font-bold tracking-widest py-4 bg-movie-card/10">戲 院 公 告</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">草衙道國賓</td>
+                                        <td>14:10</td><td>11:50</td><td>11:50</td><td>14:10</td><td>14:10</td><td>14:10</td><td>14:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 pl-6 text-left text-movie-title font-bold">屏東國賓</td>
+                                        <td>11:50</td><td>11:50</td><td>11:50</td><td>11:50</td><td>11:50</td><td>14:10</td><td>14:10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center text-sm text-movie-text/50 mt-6 tracking-wide">本場次表僅供參考，如有異動請以戲院現場公告為主。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="border-t border-movie-border overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 py-20 md:py-28 relative">
+            <div class="text-center mb-16">
+                <span class="text-movie-gold text-xs font-bold tracking-poster-wide uppercase block mb-3">Audience Reviews</span>
+                <h2 class="text-3xl md:text-4xl font-title font-bold tracking-wide text-movie-title section-header">觀眾震撼回饋</h2>
+            </div>
+            
+            <div class="relative max-w-[1200px] mx-auto">
+                <button id="prevBtn" class="absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-movie-text hover:text-movie-gold bg-movie-bg/80 border border-movie-border rounded-full z-10 transition-colors shadow-lg">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                
+                <div class="overflow-hidden px-1">
+                    <div id="carouselTrack" class="carousel-track">
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「一部將善良、正義、勇氣、覺醒與希望，深深注入觀眾心中的偉大電影！」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">Vision Times</span>
+                                    <span class="text-movie-gold text-xs">海外媒體評論</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「這部電影沒有給出簡單的答案，但它促使你提出尖銳的問題... 誠實、強烈，且以最正確的方式令人深感不安。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">IMDb 評論</span>
+                                    <span class="text-movie-gold text-xs">國外觀眾回饋</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「從軍事情報的專業視角來看，這部片把情報員面臨的道德掙扎與無煙硝戰爭的殘酷，刻畫得入木三分，極具啟發性。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">余宗基 將軍</span>
+                                    <span class="text-movie-gold text-xs">國防大學政戰學院前院長</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「這是一部所有台灣人都應該看的電影，讓我們看清資訊戰的真實樣貌與威脅，了解真相才能做出正確的選擇。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">簡舒培 議員</span>
+                                    <span class="text-movie-gold text-xs">電影試映心得</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「隨著每一個新病例與運屍袋的出現，導演讓我們切身感受到那段艱難歲月中的恐懼。這些場景最為真實，因為它們是我們必須銘記的近期歷史。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">Steve Norton</span>
+                                    <span class="text-movie-gold text-xs">專業影評人</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「身為一名華人移民，這部電影深深打動了我。它讓我感到窒息與震撼，我相信導演真正了解當今局勢的運作。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">IMDb 評論</span>
+                                    <span class="text-movie-gold text-xs">觀眾觀後感</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「沒有更好的形容詞了：第三幕的衝擊力令人心碎。它如此真實地反映了我們的世界，直擊大眾文化記憶的痛點。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">Eden Proser</span>
+                                    <span class="text-movie-gold text-xs">獨立影評人</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「在這個容易感到無力的時代，這樣的故事至關重要。它們提醒我們，即便是一個微小的聲音，依然能改變世界。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">海外影迷</span>
+                                    <span class="text-movie-gold text-xs">觀後留言</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「這部電影揭示背後的邪惡本質，讓觀眾深受觸動...看完真的是心有餘悸！細思極恐！」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">中正大學特映會</span>
+                                    <span class="text-movie-gold text-xs">校園觀眾回饋</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「在資訊爆炸的時代，真正的勇氣是願意追問真相，不隨波逐流。現代戰爭無所不在，了解真相才能做出正確選擇。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">涂兆均</span>
+                                    <span class="text-movie-gold text-xs">諾肯科技董事長</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「把人的生命看得比金錢、事業都重要。當每個人心中都有衡量善惡的尺，整個社會才有真正抵禦謊言的力量。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">陳怡伸 律師</span>
+                                    <span class="text-movie-gold text-xs">台北律師公會映後座談</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「這部兩個半小時的病毒史詩，讓人回想起疫情初期的日子，充滿著令人不安卻無比真實的熟悉感。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">Global News</span>
+                                    <span class="text-movie-gold text-xs">新聞媒體專欄</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「當我們放棄查證、盲目轉發訊息時，每個人都可能在不知不覺中成為認知戰爭的幫兇。這是一部當代社會的警世錄。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">大紀元時報</span>
+                                    <span class="text-movie-gold text-xs">專題報導評論</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「透過事實改編呈現實際真相是什麼。透過真相的了解，人們才懂得做正確的選擇，這是電影最重要的價值。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">洪宗楷</span>
+                                    <span class="text-movie-gold text-xs">行政院東部聯合服務中心執行長</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「電影融合了封城、吹哨人遭打壓等多起真實歷史事件... 帶領觀眾走進一場有關人性的思辨旅程。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">官方中文頻道粉絲</span>
+                                    <span class="text-movie-gold text-xs">乾淨世界留言</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「保持清醒除了需要時間獨立思考，更需要一位夥伴共同面對。這種支持力量，是在謊言壓力中守住良知最關鍵的依靠。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">現場與會律師</span>
+                                    <span class="text-movie-gold text-xs">映後座談分享</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「我看過很多諜報片，我覺得這一部超有震撼力的！真實到令人感到窒息。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">電影論壇網友</span>
+                                    <span class="text-movie-gold text-xs">首映評價</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「電影中談的也許是衝突、是現實，但更讓人記住的，是每個人對於選擇、良知與判斷的思考。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">台中王牌映畫特映</span>
+                                    <span class="text-movie-gold text-xs">座談會觀眾</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border border-movie-border p-8 rounded-sm h-full flex flex-col relative">
+                                <i class="fa-solid fa-quote-left text-movie-gold/20 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-text leading-relaxed font-light relative z-10 mt-4 flex-grow">
+                                    「這不只是一部電影，更是一場對內心的喚醒。看見真相是有代價的，能為生活敲響警鐘，價值是金錢無法衡量的。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-border/50 text-sm">
+                                    <span class="text-movie-title font-medium block">乾淨世界 推薦區</span>
+                                    <span class="text-movie-gold text-xs">精選核心評價</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="bg-movie-card border-2 border-movie-gold/50 p-8 rounded-sm h-full flex flex-col relative shadow-[0_0_15px_rgba(194,165,98,0.15)]">
+                                <i class="fa-solid fa-quote-left text-movie-gold/30 text-4xl absolute top-6 left-6"></i>
+                                <p class="text-movie-title text-xl leading-relaxed font-medium relative z-10 mt-4 flex-grow italic">
+                                    「幫助人們的唯一方法，<br>就是告訴他們真相。」
+                                </p>
+                                <div class="mt-6 pt-4 border-t border-movie-gold/30 text-sm">
+                                    <span class="text-movie-gold font-bold block">蘇菲 (Sophie)</span>
+                                    <span class="text-movie-text/70 text-xs">《超限戰》核心電影台詞</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <button id="nextBtn" class="absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-movie-text hover:text-movie-gold bg-movie-bg/80 border border-movie-border rounded-full z-10 transition-colors shadow-lg">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div id="carouselDots" class="flex justify-center gap-2 mt-8 flex-wrap"></div>
+        </div>
+    </section>
+
+    <section id="cta-section" class="border-t border-movie-border bg-[#0a191f] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#C2A562 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 py-24 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-title font-bold text-movie-title mb-6 tracking-wide">
+                現在就為自己與家人安排一場...
+            </h2>
+            <p class="text-xl md:text-2xl text-movie-gold font-light tracking-wide mb-10">
+                關於真相、勇氣與未來的重要對話。
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-5 mb-12">
+                <a href="#schedule" 
+                   class="px-8 py-4 bg-movie-gold hover:bg-movie-goldhover text-[#0a191f] transition-all font-bold text-lg rounded shadow-lg shadow-movie-gold/20 flex items-center justify-center gap-x-2">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>查看戲院時刻表</span>
+                </a>
+                <a href="https://www.ganjingworld.com/gjwplus/detail/the-unrestricted-war-premiering-august-8/1hqhefj9um52TjAFjjQFtWun61du1c?utm_term=unrestrictedwar&utm_medium=website&utm_source=tuw&utm_source_platform=direct&utm_campaign=website07242025&utm_content=website" 
+                   target="_blank"
+                   class="px-8 py-4 border border-movie-gold text-movie-gold hover:bg-movie-gold/10 transition-all font-bold rounded text-lg flex items-center justify-center gap-x-2">
+                    <i class="fa-solid fa-play"></i>
+                    <span>乾淨世界 GJW 線上觀看</span>
+                </a>
+            </div>
+
+            <div class="pt-10 border-t border-movie-border/50 max-w-sm mx-auto">
+                <p class="text-movie-text/70 text-sm font-medium tracking-widest uppercase mb-6">Follow Us</p>
+                <div class="flex justify-center gap-x-6">
+                    <a href="https://www.instagram.com/theunrestricted.war/" target="_blank" 
+                       class="w-12 h-12 rounded-full border border-movie-gold/50 flex items-center justify-center text-movie-gold hover:bg-movie-gold hover:text-[#0a191f] transition-all text-xl shadow-lg shadow-movie-gold/5">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.threads.com/@theunrestricted.war" target="_blank" 
+                       class="w-12 h-12 rounded-full border border-movie-gold/50 flex items-center justify-center text-movie-gold hover:bg-movie-gold hover:text-[#0a191f] transition-all text-xl shadow-lg shadow-movie-gold/5">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+                    <a href="https://www.facebook.com/TheUnrestrictedWar/" target="_blank" 
+                       class="w-12 h-12 rounded-full border border-movie-gold/50 flex items-center justify-center text-movie-gold hover:bg-movie-gold hover:text-[#0a191f] transition-all text-xl shadow-lg shadow-movie-gold/5">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-movie-border bg-movie-card py-12">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center text-sm font-light text-movie-text/70">
+            <div class="font-title font-bold text-xl text-movie-title tracking-widest mb-4 uppercase">
+                The Unrestricted War
+            </div>
+            <p>《超限戰》 © 2026 | 華裔導演馬琰執導 | 戰火無聲 真相有價</p>
+            <div class="mt-6 flex justify-center gap-x-6 text-xs">
+                <a href="https://www.ganjingworld.com/channel/1hrsnb04ct84iO1e89rJXexMs14m0c?tab=home&ht=%E8%B6%85%E9%99%90%E6%88%98&stab=hashtags&subtabshowing=latest" target="_blank" class="hover:text-movie-gold transition-colors">官方網站</a>
+                <span>|</span>
+                <a href="https://www.ganjingworld.com/gjwplus/detail/the-unrestricted-war-premiering-august-8/1hqhefj9um52TjAFjjQFtWun61du1c?utm_term=unrestrictedwar&utm_medium=website&utm_source=tuw&utm_source_platform=direct&utm_campaign=website07242025&utm_content=website" target="_blank" class="hover:text-movie-gold transition-colors">乾淨世界 GJW+ 頻道</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 手機版選單
+            document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+
+            // Carousel 輪播引擎邏輯
+            const track = document.getElementById('carouselTrack');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('carouselDots');
+            const cards = track.querySelectorAll('.carousel-item');
+            
+            let currentIndex = 0;
+            const totalCards = cards.length;
+            
+            function getCardsPerView() {
+                if (window.innerWidth >= 1024) return 3;
+                if (window.innerWidth >= 768) return 2;
+                return 1;
+            }
+
+            function updateCarousel() {
+                const cardsPerView = getCardsPerView();
+                if (currentIndex > totalCards - cardsPerView) {
+                    currentIndex = Math.max(0, totalCards - cardsPerView);
+                }
+                
+                const percentage = (currentIndex * 100) / cardsPerView;
+                track.style.transform = `translateX(-${percentage}%)`;
+                
+                prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+                prevBtn.style.cursor = currentIndex === 0 ? 'default' : 'pointer';
+                
+                nextBtn.style.opacity = currentIndex >= totalCards - cardsPerView ? '0.3' : '1';
+                nextBtn.style.cursor = currentIndex >= totalCards - cardsPerView ? 'default' : 'pointer';
+
+                updateDots(cardsPerView);
+            }
+
+            function setupDots() {
+                dotsContainer.innerHTML = '';
+                const cardsPerView = getCardsPerView();
+                const totalPages = totalCards - cardsPerView + 1;
+                
+                if (totalPages <= 1) return;
+
+                for (let i = 0; i < totalPages; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-all mt-2 ${i === currentIndex ? 'bg-movie-gold w-4' : 'bg-movie-border hover:bg-movie-text'}`;
+                    dot.addEventListener('click', () => {
+                        currentIndex = i;
+                        updateCarousel();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateDots(cardsPerView) {
+                const totalPages = totalCards - cardsPerView + 1;
+                if(dotsContainer.children.length !== totalPages) {
+                    setupDots();
+                } else {
+                    Array.from(dotsContainer.children).forEach((dot, index) => {
+                        dot.className = `w-2 h-2 rounded-full transition-all mt-2 ${index === currentIndex ? 'bg-movie-gold w-4' : 'bg-movie-border hover:bg-movie-text'}`;
+                    });
+                }
+            }
+
+            nextBtn.addEventListener('click', () => {
+                const maxIndex = totalCards - getCardsPerView();
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            window.addEventListener('resize', updateCarousel);
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>
