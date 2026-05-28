@@ -301,39 +301,223 @@
                     <p class="mt-5 text-movie-text font-light">2026/5/22(五) — 6/04(四) ｜ <span class="border border-movie-border px-2 py-1 text-xs">保護級 6+</span></p>
                 </div>
                 
-                <!-- 號外公告 -->
-                <div class="mb-12 relative overflow-hidden rounded-md border-2 border-movie-gold bg-movie-card shadow-lg shadow-movie-gold/10">
-                    <div class="absolute top-0 left-0 bg-movie-gold text-movie-bg font-bold text-sm px-5 py-1.5 rounded-br-md tracking-[0.2em]">號 外</div>
-                    <div class="p-6 pt-10">
-                        <h3 class="font-bold text-lg md:text-xl text-movie-gold mb-5 leading-relaxed">因包場觀眾反應熱烈，目前有企業額外贊助免費票券！</h3>
-                        <div class="space-y-3 text-movie-text">
-                            <p class="font-medium">📍 放映地點：南台影城</p>
-                            <p class="font-bold text-movie-title">📍《超限戰》5/27、5/28 加開免費觀影名額</p>
-                            <ul class="ml-1 space-y-1">
-                                <li>・5/27 18:20　20 張免費票</li>
-                                <li>・5/28 18:20　20 張免費票</li>
-                            </ul>
-                            <p class="text-movie-gold font-semibold">共 40 張，送完為止。</p>
-                            <div class="border-t border-movie-border/50 pt-4">
-                                <p class="font-bold text-movie-title mb-2">⚠️ 注意事項</p>
-                                <ul class="space-y-1 text-sm text-movie-text/80 leading-relaxed">
-                                    <li>・每人限登記一個場次</li>
-                                    <li>・目前可選場次代表仍有免費名額可登記</li>
-                                    <li>・各場線上登記至當天 17:50 截止</li>
-                                    <li>・免費名額有限，依表單送出時間排序</li>
-                                    <li>・填寫表單不代表一定取得免費票</li>
-                                    <li>・實際是否成功，以送出後收到的系統通知信為準</li>
-                                </ul>
-                            </div>
-                            <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                                <p class="font-bold text-movie-title">《超限戰》免費觀影加開公告 🎬</p>
-                                <a href="https://reurl.cc/N28o75" target="_blank"
-                                   class="inline-flex items-center gap-x-2 px-6 py-2.5 bg-movie-gold hover:bg-movie-goldhover text-movie-bg font-bold text-sm rounded transition-all shadow-md">
-                                    <i class="fa-solid fa-ticket"></i>
-                                    立即報名
-                                </a>
+                <!-- 號外輪播公告 -->
+                <div class="mb-12">
+                    <div class="relative max-w-[1100px] mx-auto">
+                        <button id="haowaiPrevBtn" class="absolute -left-2 md:-left-14 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center text-movie-text hover:text-movie-gold bg-movie-bg border border-movie-border hover:border-movie-gold rounded-full z-10 transition-all shadow-lg">
+                            <i class="fa-solid fa-chevron-left text-base"></i>
+                        </button>
+
+                        <div class="overflow-hidden px-1">
+                            <div id="haowaiTrack" class="carousel-track">
+                                <!-- 1. 屏東國賓 -->
+                                <div class="carousel-item">
+                                    <div class="relative overflow-hidden rounded-md border-2 border-movie-gold bg-movie-card shadow-lg shadow-movie-gold/10">
+                                        <div class="absolute top-0 left-0 bg-movie-gold text-movie-bg font-bold text-sm px-5 py-1.5 rounded-br-md tracking-[0.2em]">號 外</div>
+                                        <div class="p-6 pt-10">
+                                            <h3 class="font-bold text-lg md:text-xl text-movie-gold mb-5 leading-relaxed">因 5/24 包場觀眾反應熱烈，目前有企業額外贊助免費票券！</h3>
+                                            <div class="space-y-3 text-movie-text">
+                                                <p class="font-medium">📍 放映地點：屏東環球國賓</p>
+                                                <p class="font-bold text-movie-title">📍《超限戰》5/29-31 加開免費觀影名額</p>
+                                                <ul class="ml-1 space-y-1">
+                                                    <li>・5/29：11:50　｜　30張免費票</li>
+                                                    <li>・5/30：11:50　｜　30張免費票</li>
+                                                    <li>・5/31：11:50　｜　30張免費票</li>
+                                                </ul>
+                                                <p class="text-movie-gold font-semibold">共 90張，送完為止。</p>
+                                                <div class="border-t border-movie-border/50 pt-4">
+                                                    <p class="font-bold text-movie-title mb-2">⚠️ 注意事項：上映前若未到場領票，視同放棄</p>
+                                                    <ul class="space-y-1 text-sm text-movie-text/80 leading-relaxed">
+                                                        <li>・每人限登記一個場次</li>
+                                                        <li>・目前可選場次代表仍有免費名額可登記</li>
+                                                        <li>・各場線上登記至當天放映開始後截止</li>
+                                                        <li>・免費名額有限，依表單送出時間排序</li>
+                                                        <li>・填寫表單不代表一定取得免費票</li>
+                                                        <li>・實際是否成功，以送出後收到的系統通知信為準</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                                    <a href="https://forms.gle/JsRKoGaQ6aYiUenYA" target="_blank"
+                                                       class="inline-flex items-center gap-x-2 px-6 py-2.5 bg-movie-gold hover:bg-movie-goldhover text-movie-bg font-bold text-sm rounded transition-all shadow-md">
+                                                        <i class="fa-solid fa-ticket"></i>
+                                                        立即報名
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2. 長春國賓 -->
+                                <div class="carousel-item">
+                                    <div class="relative overflow-hidden rounded-md border-2 border-movie-gold bg-movie-card shadow-lg shadow-movie-gold/10">
+                                        <div class="absolute top-0 left-0 bg-movie-gold text-movie-bg font-bold text-sm px-5 py-1.5 rounded-br-md tracking-[0.2em]">號 外</div>
+                                        <div class="p-6 pt-10">
+                                            <h3 class="font-bold text-lg md:text-xl text-movie-gold mb-5 leading-relaxed">因 5/13 包場觀眾反應熱烈，目前有企業額外贊助免費票券！</h3>
+                                            <div class="space-y-3 text-movie-text">
+                                                <p class="font-medium">📍 放映地點：台北長春國賓</p>
+                                                <p class="font-bold text-movie-title">📍《超限戰》5/29-31 加開免費觀影名額</p>
+                                                <ul class="ml-1 space-y-1">
+                                                    <li>・5/29：11:20　｜　30張免費票</li>
+                                                    <li>・5/30：11:20　｜　30張免費票</li>
+                                                    <li>・5/31：11:20　｜　30張免費票</li>
+                                                </ul>
+                                                <p class="text-movie-gold font-semibold">共 90張，送完為止。</p>
+                                                <div class="border-t border-movie-border/50 pt-4">
+                                                    <p class="font-bold text-movie-title mb-2">⚠️ 注意事項：上映前若未到場領票，視同放棄</p>
+                                                    <ul class="space-y-1 text-sm text-movie-text/80 leading-relaxed">
+                                                        <li>・每人限登記一個場次</li>
+                                                        <li>・目前可選場次代表仍有免費名額可登記</li>
+                                                        <li>・各場線上登記至當天放映場次開始半小時前截止</li>
+                                                        <li>・免費名額有限，依表單送出時間排序</li>
+                                                        <li>・填寫表單不代表一定取得免費票</li>
+                                                        <li>・實際是否成功，以送出後收到的系統通知信為準</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                                    <a href="https://forms.gle/xrp3FcLZwiQQwmQk7" target="_blank"
+                                                       class="inline-flex items-center gap-x-2 px-6 py-2.5 bg-movie-gold hover:bg-movie-goldhover text-movie-bg font-bold text-sm rounded transition-all shadow-md">
+                                                        <i class="fa-solid fa-ticket"></i>
+                                                        立即報名
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. 淡水國賓 -->
+                                <div class="carousel-item">
+                                    <div class="relative overflow-hidden rounded-md border-2 border-movie-gold bg-movie-card shadow-lg shadow-movie-gold/10">
+                                        <div class="absolute top-0 left-0 bg-movie-gold text-movie-bg font-bold text-sm px-5 py-1.5 rounded-br-md tracking-[0.2em]">號 外</div>
+                                        <div class="p-6 pt-10">
+                                            <h3 class="font-bold text-lg md:text-xl text-movie-gold mb-5 leading-relaxed">因 5/20 包場觀眾反應熱烈，目前有企業額外贊助免費票券！</h3>
+                                            <div class="space-y-3 text-movie-text">
+                                                <p class="font-medium">📍 放映地點：淡水禮萊國賓</p>
+                                                <p class="font-bold text-movie-title">📍《超限戰》5/29-31 加開免費觀影名額</p>
+                                                <ul class="ml-1 space-y-1">
+                                                    <li>・5/29：18:10　｜　30張免費票</li>
+                                                    <li>・5/30：11:40　｜　30張免費票</li>
+                                                    <li>・5/31：11:40　｜　30張免費票</li>
+                                                </ul>
+                                                <p class="text-movie-gold font-semibold">共 90張，送完為止。</p>
+                                                <div class="border-t border-movie-border/50 pt-4">
+                                                    <p class="font-bold text-movie-title mb-2">⚠️ 注意事項：上映前若未到場領票，視同放棄</p>
+                                                    <ul class="space-y-1 text-sm text-movie-text/80 leading-relaxed">
+                                                        <li>・每人限登記一個場次</li>
+                                                        <li>・目前可選場次代表仍有免費名額可登記</li>
+                                                        <li>・各場線上登記至當天放映開始後截止</li>
+                                                        <li>・免費名額有限，依表單送出時間排序</li>
+                                                        <li>・填寫表單不代表一定取得免費票</li>
+                                                        <li>・實際是否成功，以送出後收到的系統通知信為準</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                                    <a href="https://forms.gle/oCVWp7hxyhdv4JD59" target="_blank"
+                                                       class="inline-flex items-center gap-x-2 px-6 py-2.5 bg-movie-gold hover:bg-movie-goldhover text-movie-bg font-bold text-sm rounded transition-all shadow-md">
+                                                        <i class="fa-solid fa-ticket"></i>
+                                                        立即報名
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4. 林口昕境國賓 -->
+                                <div class="carousel-item">
+                                    <div class="relative overflow-hidden rounded-md border-2 border-movie-gold bg-movie-card shadow-lg shadow-movie-gold/10">
+                                        <div class="absolute top-0 left-0 bg-movie-gold text-movie-bg font-bold text-sm px-5 py-1.5 rounded-br-md tracking-[0.2em]">號 外</div>
+                                        <div class="p-6 pt-10">
+                                            <h3 class="font-bold text-lg md:text-xl text-movie-gold mb-5 leading-relaxed">因 5/29 包場熱烈一票難求，目前有企業額外贊助免費票券！</h3>
+                                            <div class="space-y-3 text-movie-text">
+                                                <p class="font-medium">📍 放映地點：林口昕境國賓</p>
+                                                <p class="font-bold text-movie-title">📍《超限戰》5/30-6/01 加開免費觀影名額</p>
+                                                <ul class="ml-1 space-y-1">
+                                                    <li>・5/30：11:40　｜　30張免費票</li>
+                                                    <li>・5/31：11:40　｜　30張免費票</li>
+                                                    <li>・6/01：16:10　｜　30張免費票</li>
+                                                </ul>
+                                                <p class="text-movie-gold font-semibold">共 90張，送完為止。</p>
+                                                <div class="border-t border-movie-border/50 pt-4">
+                                                    <p class="font-bold text-movie-title mb-2">⚠️ 注意事項：上映前若未到場領票，視同放棄</p>
+                                                    <ul class="space-y-1 text-sm text-movie-text/80 leading-relaxed">
+                                                        <li>・每人限登記一個場次</li>
+                                                        <li>・目前可選場次代表仍有免費名額可登記</li>
+                                                        <li>・各場線上登記至當天放映開始後截止</li>
+                                                        <li>・免費名額有限，依表單送出時間排序</li>
+                                                        <li>・填寫表單不代表一定取得免費票</li>
+                                                        <li>・實際是否成功，以送出後收到的系統通知信為準</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                                    <a href="https://forms.gle/ZZTw52z3YaSzKRpAA" target="_blank"
+                                                       class="inline-flex items-center gap-x-2 px-6 py-2.5 bg-movie-gold hover:bg-movie-goldhover text-movie-bg font-bold text-sm rounded transition-all shadow-md">
+                                                        <i class="fa-solid fa-ticket"></i>
+                                                        立即報名
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 5. 高雄國賓 -->
+                                <div class="carousel-item">
+                                    <div class="relative overflow-hidden rounded-md border-2 border-movie-gold bg-movie-card shadow-lg shadow-movie-gold/10">
+                                        <div class="absolute top-0 left-0 bg-movie-gold text-movie-bg font-bold text-sm px-5 py-1.5 rounded-br-md tracking-[0.2em]">號 外</div>
+                                        <div class="p-6 pt-10">
+                                            <h3 class="font-bold text-lg md:text-xl text-movie-gold mb-5 leading-relaxed">因 5/29 包場熱烈一票難求，目前有企業額外贊助免費票券！</h3>
+                                            <div class="space-y-3 text-movie-text">
+                                                <p class="font-medium">📍 放映地點：高雄草衙道國賓</p>
+                                                <p class="font-bold text-movie-title">📍《超限戰》5/29-31 加開免費觀影名額</p>
+                                                <ul class="ml-1 space-y-1">
+                                                    <li>・5/29：14:10　｜　30張免費票</li>
+                                                    <li>・5/30：11:50　｜　30張免費票</li>
+                                                    <li>・5/31：11:50　｜　30張免費票</li>
+                                                </ul>
+                                                <p class="text-movie-gold font-semibold">共 90張，送完為止。</p>
+                                                <div class="border-t border-movie-border/50 pt-4">
+                                                    <p class="font-bold text-movie-title mb-2">⚠️ 注意事項：上映前若未到場領票，視同放棄</p>
+                                                    <ul class="space-y-1 text-sm text-movie-text/80 leading-relaxed">
+                                                        <li>・每人限登記一個場次</li>
+                                                        <li>・上映前若未到場領票，視同放棄。</li>
+                                                        <li>・目前可選場次代表仍有免費名額可登記</li>
+                                                        <li>・各場線上登記至當天放映開始後截止</li>
+                                                        <li>・免費名額有限，依表單送出時間排序</li>
+                                                        <li>・填寫表單不代表一定取得免費票</li>
+                                                        <li>・實際是否成功，以送出後收到的系統通知信為準</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                                    <a href="https://forms.gle/W6224LfFXjQhzLhw8" target="_blank"
+                                                       class="inline-flex items-center gap-x-2 px-6 py-2.5 bg-movie-gold hover:bg-movie-goldhover text-movie-bg font-bold text-sm rounded transition-all shadow-md">
+                                                        <i class="fa-solid fa-ticket"></i>
+                                                        立即報名
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <button id="haowaiNextBtn" class="absolute -right-2 md:-right-14 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center text-movie-text hover:text-movie-gold bg-movie-bg border border-movie-border hover:border-movie-gold rounded-full z-10 transition-all shadow-lg">
+                            <i class="fa-solid fa-chevron-right text-base"></i>
+                        </button>
+                    </div>
+
+                    <div id="haowaiDots" class="flex justify-center gap-2 mt-6 flex-wrap"></div>
+                    <div class="flex justify-center items-center gap-x-4 mt-4">
+                        <button id="haowaiPrevBtnBottom" class="flex items-center gap-x-2 px-6 py-2.5 border border-movie-border hover:border-movie-gold text-movie-text hover:text-movie-gold rounded transition-all text-sm font-medium group">
+                            <i class="fa-solid fa-chevron-left text-xs group-hover:-translate-x-1 transition-transform"></i>
+                            上一個
+                        </button>
+                        <button id="haowaiNextBtnBottom" class="flex items-center gap-x-2 px-6 py-2.5 border border-movie-border hover:border-movie-gold text-movie-text hover:text-movie-gold rounded transition-all text-sm font-medium group">
+                            下一個
+                            <i class="fa-solid fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -1078,6 +1262,87 @@
 
             window.addEventListener('resize', updateCarousel);
             updateCarousel();
+
+            // 號外輪播 (Haowai Special Edition Carousel)
+            const haowaiTrack = document.getElementById('haowaiTrack');
+            const haowaiPrevBtn = document.getElementById('haowaiPrevBtn');
+            const haowaiNextBtn = document.getElementById('haowaiNextBtn');
+            const haowaiDotsContainer = document.getElementById('haowaiDots');
+            const haowaiCards = haowaiTrack.querySelectorAll('.carousel-item');
+
+            let haowaiIndex = 0;
+            const haowaiTotal = haowaiCards.length;
+
+            function getHaowaiPerView() {
+                if (window.innerWidth >= 1024) return 2;
+                if (window.innerWidth >= 768) return 1;
+                return 1;
+            }
+
+            function updateHaowai() {
+                const perView = getHaowaiPerView();
+                if (haowaiIndex > haowaiTotal - perView) {
+                    haowaiIndex = Math.max(0, haowaiTotal - perView);
+                }
+                const percentage = (haowaiIndex * 100) / perView;
+                haowaiTrack.style.transform = `translateX(-${percentage}%)`;
+
+                const atStart = haowaiIndex === 0;
+                const atEnd = haowaiIndex >= haowaiTotal - perView;
+
+                haowaiPrevBtn.style.opacity = atStart ? '0.3' : '1';
+                haowaiPrevBtn.style.cursor = atStart ? 'default' : 'pointer';
+                haowaiNextBtn.style.opacity = atEnd ? '0.3' : '1';
+                haowaiNextBtn.style.cursor = atEnd ? 'default' : 'pointer';
+
+                const prevBottom = document.getElementById('haowaiPrevBtnBottom');
+                const nextBottom = document.getElementById('haowaiNextBtnBottom');
+                if (prevBottom) { prevBottom.style.opacity = atStart ? '0.3' : '1'; prevBottom.style.cursor = atStart ? 'default' : 'pointer'; }
+                if (nextBottom) { nextBottom.style.opacity = atEnd ? '0.3' : '1'; nextBottom.style.cursor = atEnd ? 'default' : 'pointer'; }
+
+                updateHaowaiDots(perView);
+            }
+
+            function setupHaowaiDots() {
+                haowaiDotsContainer.innerHTML = '';
+                const perView = getHaowaiPerView();
+                const totalPages = haowaiTotal - perView + 1;
+                if (totalPages <= 1) return;
+                for (let i = 0; i < totalPages; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-all mt-2 ${i === haowaiIndex ? 'bg-movie-gold w-4' : 'bg-movie-border hover:bg-movie-text'}`;
+                    dot.addEventListener('click', () => { haowaiIndex = i; updateHaowai(); });
+                    haowaiDotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateHaowaiDots(perView) {
+                const totalPages = haowaiTotal - perView + 1;
+                if (haowaiDotsContainer.children.length !== totalPages) {
+                    setupHaowaiDots();
+                } else {
+                    Array.from(haowaiDotsContainer.children).forEach((dot, index) => {
+                        dot.className = `w-2 h-2 rounded-full transition-all mt-2 ${index === haowaiIndex ? 'bg-movie-gold w-4' : 'bg-movie-border hover:bg-movie-text'}`;
+                    });
+                }
+            }
+
+            haowaiNextBtn.addEventListener('click', () => {
+                const maxIndex = haowaiTotal - getHaowaiPerView();
+                if (haowaiIndex < maxIndex) { haowaiIndex++; updateHaowai(); }
+            });
+            haowaiPrevBtn.addEventListener('click', () => {
+                if (haowaiIndex > 0) { haowaiIndex--; updateHaowai(); }
+            });
+            document.getElementById('haowaiPrevBtnBottom').addEventListener('click', () => {
+                if (haowaiIndex > 0) { haowaiIndex--; updateHaowai(); }
+            });
+            document.getElementById('haowaiNextBtnBottom').addEventListener('click', () => {
+                const maxIndex = haowaiTotal - getHaowaiPerView();
+                if (haowaiIndex < maxIndex) { haowaiIndex++; updateHaowai(); }
+            });
+            window.addEventListener('resize', updateHaowai);
+            updateHaowai();
         });
     </script>
 </body>
